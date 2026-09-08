@@ -30,4 +30,33 @@
         <h1 class="header">welcome to endxrcraft.zip brother</h1>
         <img src="bp.gif" alt="">
     </div>
+    <script>
+    const konamiCode = [
+      'ArrowUp', 'ArrowUp',
+      'ArrowDown', 'ArrowDown',
+      'ArrowLeft', 'ArrowRight',
+      'ArrowLeft', 'ArrowRight',
+      'x', 'y'
+    ];
+
+    const deltaQuotes = [
+      "Did you really think a cheat code would work on me, Snake?",
+      "Relying on old tricks? You still have much to learn, young snake.",
+      "Cheaters never prosper... now feel the sting of my Mosin-Nagant!",
+      "Ah... attempting the classic code? Not this time."
+    ];
+
+    let inputSequence = [];
+
+    window.addEventListener('keydown', (e) => {
+      inputSequence.push(e.key.length === 1 ? e.key.toLowerCase() : e.key);
+      inputSequence = inputSequence.slice(-konamiCode.length);
+
+      if (JSON.stringify(inputSequence) === JSON.stringify(konamiCode)) {
+        const randomQuote = deltaQuotes[Math.floor(Math.random() * deltaQuotes.length)];
+        alert(randomQuote);
+        inputSequence = [];
+      }
+    });
+    </script>
 </body>
