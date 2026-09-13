@@ -1,6 +1,9 @@
 <!DOCTYPE html>
+<html>
 <head>
+    <meta charset="utf-8">
     <title>tuff ass landing page</title>
+
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://schlongittyballifuck.pingusurmars.xyz/js/pa-KtMOmNvyL4_6pghvyWx_l.js"></script>
     <script>
@@ -9,35 +12,62 @@
         endpoint: "https://schlongittyballifuck.pingusurmars.xyz/api/event"
       });
     </script>
+
+    
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            overflow-y: auto;
+        }
+        .santaclauster {
+            text-align: center;
+            padding: 60px 0 80px 0;
+        }
+        .header {
+            color: #ffffff;
+            font-family: 'Andy';
+        }
+        .btd5-title {
+            color: #ffffff;
+            font-family: 'Andy';
+            margin-bottom: 10px;
+        }
+        @font-face {
+            font-family: 'Andy';
+            src: url(ANDYB.TTF);
+        }
+    </style>
 </head>
-<style>
-    .santaclauster {
-        text-align: center;
-        position: absolute;
-        margin: 0;
-        top: 50%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        zoom: 135%;
-    }
-    .header {
-        color: #ffffff;
-        font-family: 'Andy';
-    }
-    @font-face {
-        font-family: 'Andy';
-        src: url(ANDYB.TTF);
-    }
-    body {
-        background-color: #121212;
-    }
-</style>
 <body>
     <div class="santaclauster">
-        <h1 class="header">welcome to endxrcraft.zip brother</h1>
-        <img src="bp.gif" alt="">
-    </div>
+    <h1 class="header">welcome to endxrcraft.zip brother</h1>
+    <img src="bp.gif" alt="" style="max-width: 220px; margin-bottom: 500px;">
+
+<h2 class="btd5-title">btd5 corner(save using save manager by right clicking) </h2>
+    <div id="ruffle" style="margin: 0 auto 30px auto; width: 900px; max-width: 100%;"></div>
+</div>
+
+    <script>
+        var swfobject = {};
+
+        swfobject.embedSWF = function(url, cont, width, height){
+            var ruffle = window.RufflePlayer.newest(),
+                player = Object.assign(document.getElementById(cont).appendChild(ruffle.createPlayer()), {
+                    width: width,
+                    height: height,
+                    style: 'width: ' + width + 'px; height: ' + height + 'px',
+                });
+
+            player.load({ url: url });
+        }
+
+        swfobject.embedSWF('https://raw.githubusercontent.com/gagedevs/bloonstd5/main/btd5.swf', 'ruffle', 900, 900);
+    </script>
+
     <script>
     const konamiCode = [
       'ArrowUp', 'ArrowUp',
@@ -68,3 +98,4 @@
     });
     </script>
 </body>
+</html>
